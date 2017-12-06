@@ -12,3 +12,4 @@ Proportional Piston Tank Controller by David Forrest based on work by Eric Weber
   Nov 2017 Put pullup in software this seems to eliminate the need for a pullup resistor.
   Nov 2017 Built In LED now shows forward & reverse
   AnalogSmooth routine not actually used.
+  Note that this routine has only been tested on the "bench" so far, not in the "wet."
