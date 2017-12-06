@@ -1,5 +1,5 @@
 # submarine-proportional-pistontank
-Proportional control of a piston tank for model submarines 
+Proportional control of a piston tank for model submarines.  
 Proportional Piston Tank Controller by David Forrest based on work by Eric Weber and Gabriel Staples.
   My code changes are labelled RDF. 
   Hall switch (A1104 from Allegro) used to count revolutions and give proportional control.
