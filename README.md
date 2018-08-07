@@ -12,3 +12,4 @@ Proportional Piston Tank Controller by David Forrest based on work by Eric Weber
   Nov 2017 Put pullup in software this seems to eliminate the need for a pullup resistor.
   Nov 2017 Built In LED now shows forward & reverse
   AnalogSmooth routine not actually used.
+  Aug 2018. Pinout details added for cheap, easily available (43A??) H bridge - IBT-2
