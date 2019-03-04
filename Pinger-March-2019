@@ -1,0 +1,33 @@
+// Feb 22nd. Now using toneAC for higher sound output
+//Transmit ultrasonic output on Digital pins 9,10 using push/pull on toneAC for increased output
+//Uses sleep routine
+//Draws about 7mAnn n n 
+#include <Sleep_n0m1.h>
+#include <toneAC.h> // Higher volume ultrasound using push-pull
+
+Sleep sleep;
+unsigned long sleepTime; //how long you want the arduino to sleep
+
+void setup ()
+{
+   sleepTime = 2000; //set sleep time in ms, max sleep time is 49.7 days
+
+}  // end of setup
+
+void loop ()
+{
+
+  ultrapulse();
+
+  sleep.pwrDownMode(); //set sleep mode
+  sleep.sleepDelay(sleepTime); //sleep for: sleepTime
+
+}
+
+//Ultrasonic pulse function
+//Transmit ultrasonic output on Pin 9,10 using push/pull on toneAC
+void ultrapulse() {
+  toneAC(40000);
+  delay(20);
+  noToneAC();
+}
