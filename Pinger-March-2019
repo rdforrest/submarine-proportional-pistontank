@@ -1,7 +1,7 @@
 // Feb 22nd. Now using toneAC for higher sound output
 //Transmit ultrasonic output on Digital pins 9,10 using push/pull on toneAC for increased output
 //Uses sleep routine
-//Draws about 7mAnn n n 
+//Draws about 7mA
 #include <Sleep_n0m1.h>
 #include <toneAC.h> // Higher volume ultrasound using push-pull
 
