@@ -13,4 +13,5 @@ Proportional Piston Tank Controller by David Forrest based on work by Eric Weber
   Nov 2017 Built In LED now shows forward & reverse
   AnalogSmooth routine not actually used.
   Aug 2018. Pinout details added for cheap, easily available (43A??) H bridge - IBT-2
-  Seot 2018 . RC Guy library details added and AnalogSmooth references removed.
+  Sept 2018 . RC Guy library details added and AnalogSmooth references removed.
+  March 2019. Software still needs work before use in a working model sub - failsafe issues.
