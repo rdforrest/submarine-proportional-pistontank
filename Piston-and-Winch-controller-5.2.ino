@@ -3,7 +3,8 @@
   24th March 2020
   Proportional Piston Tank Controller or winch controller by David Forrest based on work by Eric Weber and Gabriel Staples. 18/9/2018
   You need to comment out some lines marked "winch" if you want to use at as a winch controller. (Search for winch)
-  Differeces for winch are: shorter initial delay, on/off stick input and no failsafe
+  Differences for winch are: shorter initial delay, on/off stick input and no failsafe
+  Use a genuine Arduino Nano for reliability. (I have had problems with clones,)
   My code changes are labelled RDF
   Hall switch (A1104 from Allegro) used to count revolutions and give proportional control.
   An error signal is generated from the Hall switch count and the r/c input pulse.
@@ -290,11 +291,11 @@ void loop() {
     digitalWrite(enA, HIGH);    //High runs motor
     reverse = 8;
   }
-  // If Failsafe triggered - set piston to empty. 
+  // If Failsafe triggered - set piston to empty.
   // Substitute constant value for failsafe_count to stop failsafe working for winch work. Comment out next line for piston tanks.
   //failsafe_count = 1;
   if ((pulseFreq > 53) || (pulseFreq < 49) && (failsafe_count > 1000))
-  
+
   {
 
     failsafe_count = ++failsafe_count; //Increment failsafe count by RDF
