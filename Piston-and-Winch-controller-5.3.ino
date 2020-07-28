@@ -1,7 +1,7 @@
 
 /*
   21st July 2020
-  Proportional Piston Tank Controller or winch controller by David Forrest based on work by Eric Weber and Gabriel Staples. 18/9/2018
+  Unauthorised use prohibited. Proportional Piston Tank Controller or winch controller by David Forrest based on work by Eric Weber and Gabriel Staples. 18/9/2018
   You need to comment out some lines marked "winch" if you want to use at as a winch controller. (Search for winch)
   Differences for winch are: shorter initial delay, on/off stick input and no failsafe
   Use a genuine Arduino Nano for reliability. (I have had problems with clones,)
