@@ -11,4 +11,4 @@ Proportional Piston Tank Controller by David Forrest based on work by Eric Weber
   Hall switch needs +5v supply.
   March 2020 now tested in model sub and working well.
   Latest version can also be used for simple sail-winch and pump control.
-  
+  August 2021. This version for a pic 18f
