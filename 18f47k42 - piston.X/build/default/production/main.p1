@@ -2266,173 +2266,173 @@ Version 4.0 HI-TECH Software Intermediate Code
 "47698
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f47k42.h: 47698: __asm("TOSU equ 03FFFh");
 [; <" TOSU equ 03FFFh ;# ">
-"86 main.c
-[; ;main.c: 86: int mody = 0;
+"94 main.c
+[; ;main.c: 94: int mody = 0;
 [v _mody `i ~T0 @X0 1 e ]
 [i _mody
 -> 0 `i
 ]
-"87
-[; ;main.c: 87: int band = 0;
+"95
+[; ;main.c: 95: int band = 0;
 [v _band `i ~T0 @X0 1 e ]
 [i _band
 -> 0 `i
 ]
-"88
-[; ;main.c: 88: int ip_pulse = 0;
+"96
+[; ;main.c: 96: int ip_pulse = 0;
 [v _ip_pulse `i ~T0 @X0 1 e ]
 [i _ip_pulse
 -> 0 `i
 ]
-"89
-[; ;main.c: 89: signed int errsig = 0;
+"97
+[; ;main.c: 97: signed int errsig = 0;
 [v _errsig `i ~T0 @X0 1 e ]
 [i _errsig
 -> 0 `i
 ]
-"90
-[; ;main.c: 90: unsigned long duration1;
+"98
+[; ;main.c: 98: unsigned long duration1;
 [v _duration1 `ul ~T0 @X0 1 e ]
-"91
-[; ;main.c: 91: signed int state = 0;
+"99
+[; ;main.c: 99: signed int state = 0;
 [v _state `i ~T0 @X0 1 e ]
 [i _state
 -> 0 `i
 ]
-"92
-[; ;main.c: 92: signed int lastState = 0;
+"100
+[; ;main.c: 100: signed int lastState = 0;
 [v _lastState `i ~T0 @X0 1 e ]
 [i _lastState
 -> 0 `i
 ]
-"93
-[; ;main.c: 93: int count = 0;
+"101
+[; ;main.c: 101: int count = 0;
 [v _count `i ~T0 @X0 1 e ]
 [i _count
 -> 0 `i
 ]
-"94
-[; ;main.c: 94: int reverse = 15;
+"102
+[; ;main.c: 102: int reverse = 15;
 [v _reverse `i ~T0 @X0 1 e ]
 [i _reverse
 -> 15 `i
 ]
-"95
-[; ;main.c: 95: int failsafe_count = 1;
+"103
+[; ;main.c: 103: int failsafe_count = 1;
 [v _failsafe_count `i ~T0 @X0 1 e ]
 [i _failsafe_count
 -> 1 `i
 ]
-"96
-[; ;main.c: 96: unsigned long duration;
+"104
+[; ;main.c: 104: unsigned long duration;
 [v _duration `ul ~T0 @X0 1 e ]
-"97
-[; ;main.c: 97: float analog;
+"105
+[; ;main.c: 105: float analog;
 [v _analog `f ~T0 @X0 1 e ]
-"99
-[; ;main.c: 99: uint32_t Width = 3;
+"107
+[; ;main.c: 107: uint32_t Width = 3;
 [v _Width `ul ~T0 @X0 1 e ]
 [i _Width
 -> -> -> 3 `i `l `ul
 ]
-"100
-[; ;main.c: 100: uint32_t Period = 0;
+"108
+[; ;main.c: 108: uint32_t Period = 0;
 [v _Period `ul ~T0 @X0 1 e ]
 [i _Period
 -> -> -> 0 `i `l `ul
 ]
-"101
-[; ;main.c: 101: uint32_t Timer = 0;
+"109
+[; ;main.c: 109: uint32_t Timer = 0;
 [v _Timer `ul ~T0 @X0 1 e ]
 [i _Timer
 -> -> -> 0 `i `l `ul
 ]
-"102
-[; ;main.c: 102: int Counter = 0;
+"110
+[; ;main.c: 110: int Counter = 0;
 [v _Counter `i ~T0 @X0 1 e ]
 [i _Counter
 -> 0 `i
 ]
-"106
-[; ;main.c: 106: void counterHall_callback(void) {
+"114
+[; ;main.c: 114: void counterHall_callback(void) {
 [v _counterHall_callback `(v ~T0 @X0 1 ef ]
 {
 [e :U _counterHall_callback ]
 [f ]
-"107
-[; ;main.c: 107:     Counter = Counter + 1;
+"115
+[; ;main.c: 115:     Counter = Counter + 1;
 [e = _Counter + _Counter -> 1 `i ]
-"109
-[; ;main.c: 109: }
+"117
+[; ;main.c: 117: }
 [e :UE 2201 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"154
-[; ;main.c: 154: void main(void) {
+"162
+[; ;main.c: 162: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"156
-[; ;main.c: 156:     SYSTEM_Initialize();
+"164
+[; ;main.c: 164:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"157
-[; ;main.c: 157:     INT0_SetInterruptHandler(counterHall_callback);
+"165
+[; ;main.c: 165:     INT0_SetInterruptHandler(counterHall_callback);
 [e ( _INT0_SetInterruptHandler (1 &U _counterHall_callback ]
-"163
-[; ;main.c: 163:     (INTCON0bits.GIE = 1);
+"171
+[; ;main.c: 171:     (INTCON0bits.GIE = 1);
 [e = . . _INTCON0bits 0 6 -> -> 1 `i `uc ]
-"170
-[; ;main.c: 170:     _delay((unsigned long)((500)*(500000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 500000 `l `d .4000.0 `ul ]
-"172
-[; ;main.c: 172:     LATAbits.LATA0 = 1;
-[e = . . _LATAbits 0 0 -> -> 1 `i `uc ]
-"173
-[; ;main.c: 173:     LATAbits.LATA1 = 0;
-[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
-"174
-[; ;main.c: 174:     LATAbits.LATA2 = 1;
-[e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
-"175
-[; ;main.c: 175:     LATEbits.LATE2 = 0;
-[e = . . _LATEbits 0 2 -> -> 0 `i `uc ]
-"177
-[; ;main.c: 177:     printf(" \r\n");
-[e ( _printf :s 1C ]
 "178
-[; ;main.c: 178:     printf("Start up delay. Begin waiting for r/c pulses on input pin. \r\n");
-[e ( _printf :s 2C ]
-"179
-[; ;main.c: 179:     printf("Data will be printed after pulses are received. \r\n");
-[e ( _printf :s 3C ]
+[; ;main.c: 178:     _delay((unsigned long)((500)*(500000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 500000 `l `d .4000.0 `ul ]
+"180
+[; ;main.c: 180:     LATAbits.LATA0 = 1;
+[e = . . _LATAbits 0 0 -> -> 1 `i `uc ]
+"181
+[; ;main.c: 181:     LATAbits.LATA1 = 0;
+[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
 "182
-[; ;main.c: 182:     switch (mody) {
+[; ;main.c: 182:     LATAbits.LATA2 = 1;
+[e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
+"183
+[; ;main.c: 183:     LATEbits.LATE2 = 0;
+[e = . . _LATEbits 0 2 -> -> 0 `i `uc ]
+"185
+[; ;main.c: 185:     printf(" \r\n");
+[e ( _printf :s 1C ]
+"186
+[; ;main.c: 186:     printf("Start up delay. Begin waiting for r/c pulses on input pin. \r\n");
+[e ( _printf :s 2C ]
+"187
+[; ;main.c: 187:     printf("Data will be printed after pulses are received. \r\n");
+[e ( _printf :s 3C ]
+"190
+[; ;main.c: 190:     switch (mody) {
 [e $U 2204  ]
 {
-"183
-[; ;main.c: 183:         case 0: _delay((unsigned long)((35000)*(500000/4000.0)));
+"191
+[; ;main.c: 191:         case 0: _delay((unsigned long)((35000)*(500000/4000.0)));
 [e :U 2205 ]
 [e ( __delay (1 -> * -> -> 35000 `l `d / -> -> 500000 `l `d .4000.0 `ul ]
-"184
-[; ;main.c: 184:             break;
+"192
+[; ;main.c: 192:             break;
 [e $U 2203  ]
-"185
-[; ;main.c: 185:         case 1: _delay((unsigned long)((500)*(500000/4000.0)));
+"193
+[; ;main.c: 193:         case 1: _delay((unsigned long)((500)*(500000/4000.0)));
 [e :U 2206 ]
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 500000 `l `d .4000.0 `ul ]
-"186
-[; ;main.c: 186:             break;
+"194
+[; ;main.c: 194:             break;
 [e $U 2203  ]
-"187
-[; ;main.c: 187:         case 2: _delay((unsigned long)((500)*(500000/4000.0)));
+"195
+[; ;main.c: 195:         case 2: _delay((unsigned long)((500)*(500000/4000.0)));
 [e :U 2207 ]
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 500000 `l `d .4000.0 `ul ]
-"188
-[; ;main.c: 188:             break;
+"196
+[; ;main.c: 196:             break;
 [e $U 2203  ]
-"189
-[; ;main.c: 189:     }
+"197
+[; ;main.c: 197:     }
 }
 [e $U 2203  ]
 [e :U 2204 ]
@@ -2441,33 +2441,33 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 2 `i 2207
  2203 ]
 [e :U 2203 ]
-"193
-[; ;main.c: 193:     switch (mody) {
+"201
+[; ;main.c: 201:     switch (mody) {
 [e $U 2209  ]
 {
-"194
-[; ;main.c: 194:         case 0: count = 0;
+"202
+[; ;main.c: 202:         case 0: count = 0;
 [e :U 2210 ]
 [e = _count -> 0 `i ]
-"195
-[; ;main.c: 195:             break;
+"203
+[; ;main.c: 203:             break;
 [e $U 2208  ]
-"196
-[; ;main.c: 196:         case 1: count = 50;
+"204
+[; ;main.c: 204:         case 1: count = 50;
 [e :U 2211 ]
 [e = _count -> 50 `i ]
-"197
-[; ;main.c: 197:             break;
+"205
+[; ;main.c: 205:             break;
 [e $U 2208  ]
-"198
-[; ;main.c: 198:         case 2: count = 5;
+"206
+[; ;main.c: 206:         case 2: count = 5;
 [e :U 2212 ]
 [e = _count -> 5 `i ]
-"199
-[; ;main.c: 199:             break;
+"207
+[; ;main.c: 207:             break;
 [e $U 2208  ]
-"200
-[; ;main.c: 200:     }
+"208
+[; ;main.c: 208:     }
 }
 [e $U 2208  ]
 [e :U 2209 ]
@@ -2476,80 +2476,80 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 2 `i 2212
  2208 ]
 [e :U 2208 ]
-"204
-[; ;main.c: 204:     while (1) {
+"212
+[; ;main.c: 212:     while (1) {
 [e :U 2214 ]
 {
-"207
-[; ;main.c: 207:         Width = SMT1CPW;
+"215
+[; ;main.c: 215:         Width = SMT1CPW;
 [e = _Width -> _SMT1CPW `ul ]
-"208
-[; ;main.c: 208:         Period = SMT1CPR;
-[e = _Period -> _SMT1CPR `ul ]
-"209
-[; ;main.c: 209:         Timer = SMT1TMR;
-[e = _Timer -> _SMT1TMR `ul ]
-"212
-[; ;main.c: 212:         count = Counter;
-[e = _count _Counter ]
 "216
-[; ;main.c: 216:         if (state == 1 && lastState == 0) {
+[; ;main.c: 216:         Period = SMT1CPR;
+[e = _Period -> _SMT1CPR `ul ]
+"217
+[; ;main.c: 217:         Timer = SMT1TMR;
+[e = _Timer -> _SMT1TMR `ul ]
+"220
+[; ;main.c: 220:         count = Counter;
+[e = _count _Counter ]
+"224
+[; ;main.c: 224:         if (state == 1 && lastState == 0) {
 [e $ ! && == _state -> 1 `i == _lastState -> 0 `i 2216  ]
 {
-"219
-[; ;main.c: 219:             if (reverse > 0) {
+"227
+[; ;main.c: 227:             if (reverse > 0) {
 [e $ ! > _reverse -> 0 `i 2217  ]
 {
-"220
-[; ;main.c: 220:                 --count;
+"228
+[; ;main.c: 228:                 --count;
 [e =- _count -> 1 `i ]
-"221
-[; ;main.c: 221:             } else {
+"229
+[; ;main.c: 229:             } else {
 }
 [e $U 2218  ]
 [e :U 2217 ]
 {
-"222
-[; ;main.c: 222:                 ++count;
+"230
+[; ;main.c: 230:                 ++count;
 [e =+ _count -> 1 `i ]
-"223
-[; ;main.c: 223:             }
+"231
+[; ;main.c: 231:             }
 }
 [e :U 2218 ]
-"224
-[; ;main.c: 224:         }
+"232
+[; ;main.c: 232:         }
 }
 [e :U 2216 ]
-"226
-[; ;main.c: 226:         lastState = state;
-[e = _lastState _state ]
 "234
-[; ;main.c: 234:         switch (mody) {
+[; ;main.c: 234:         lastState = state;
+[e = _lastState _state ]
+"242
+[; ;main.c: 242:         switch (mody) {
 [e $U 2220  ]
 {
-"235
-[; ;main.c: 235:             case 0: ip_pulse = (((Width - 0) / 0.5) - 240);
+"245
+[; ;main.c: 245:             case 0: ip_pulse = ((Width - 169)*4.5);
 [e :U 2221 ]
-[e = _ip_pulse -> - / -> - _Width -> -> -> 0 `i `l `ul `d .0.5 -> -> 240 `i `d `i ]
-"236
-[; ;main.c: 236:                 break;
+[e = _ip_pulse -> * -> - _Width -> -> -> 169 `i `l `ul `d .4.5 `i ]
+"247
+[; ;main.c: 247:                 break;
 [e $U 2219  ]
-"237
-[; ;main.c: 237:             case 1: ip_pulse = (((Width - 0) / 0.5) - 240);
+"248
+[; ;main.c: 248:             case 1: ip_pulse = ((Width - 169)*4.5);
 [e :U 2222 ]
-[e = _ip_pulse -> - / -> - _Width -> -> -> 0 `i `l `ul `d .0.5 -> -> 240 `i `d `i ]
-"238
-[; ;main.c: 238:                 break;
+[e = _ip_pulse -> * -> - _Width -> -> -> 169 `i `l `ul `d .4.5 `i ]
+"249
+[; ;main.c: 249:                 break;
 [e $U 2219  ]
-"240
-[; ;main.c: 240:             case 2: ip_pulse = (((Width - 0) / 0.5) - 240);
+"251
+[; ;main.c: 251:             case 2: ip_pulse = ((Width - 169)*4.5);
 [e :U 2223 ]
-[e = _ip_pulse -> - / -> - _Width -> -> -> 0 `i `l `ul `d .0.5 -> -> 240 `i `d `i ]
-"241
-[; ;main.c: 241:                 break;
+[e = _ip_pulse -> * -> - _Width -> -> -> 169 `i `l `ul `d .4.5 `i ]
+"252
+[; ;main.c: 252:                 break;
 [e $U 2219  ]
-"242
-[; ;main.c: 242:         }
+"253
+[; ;main.c: 253:         }
 }
 [e $U 2219  ]
 [e :U 2220 ]
@@ -2558,33 +2558,33 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 2 `i 2223
  2219 ]
 [e :U 2219 ]
-"245
-[; ;main.c: 245:         switch (mody) {
+"256
+[; ;main.c: 256:         switch (mody) {
 [e $U 2225  ]
 {
-"246
-[; ;main.c: 246:             case 0: count = count;
+"257
+[; ;main.c: 257:             case 0: count = count;
 [e :U 2226 ]
 [e = _count _count ]
-"247
-[; ;main.c: 247:                 break;
+"258
+[; ;main.c: 258:                 break;
 [e $U 2224  ]
-"248
-[; ;main.c: 248:             case 1: count = 50;
+"259
+[; ;main.c: 259:             case 1: count = 50;
 [e :U 2227 ]
 [e = _count -> 50 `i ]
-"249
-[; ;main.c: 249:                 break;
+"260
+[; ;main.c: 260:                 break;
 [e $U 2224  ]
-"250
-[; ;main.c: 250:             case 2: count = count;
+"261
+[; ;main.c: 261:             case 2: count = count;
 [e :U 2228 ]
 [e = _count _count ]
-"251
-[; ;main.c: 251:                 break;
+"262
+[; ;main.c: 262:                 break;
 [e $U 2224  ]
-"252
-[; ;main.c: 252:         }
+"263
+[; ;main.c: 263:         }
 }
 [e $U 2224  ]
 [e :U 2225 ]
@@ -2593,33 +2593,33 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 2 `i 2228
  2224 ]
 [e :U 2224 ]
-"255
-[; ;main.c: 255:         switch (mody) {
+"266
+[; ;main.c: 266:         switch (mody) {
 [e $U 2230  ]
 {
-"256
-[; ;main.c: 256:             case 0: band = 5;
+"267
+[; ;main.c: 267:             case 0: band = 5;
 [e :U 2231 ]
 [e = _band -> 5 `i ]
-"257
-[; ;main.c: 257:                 break;
+"268
+[; ;main.c: 268:                 break;
 [e $U 2229  ]
-"258
-[; ;main.c: 258:             case 1: band = 20;
+"269
+[; ;main.c: 269:             case 1: band = 30;
 [e :U 2232 ]
-[e = _band -> 20 `i ]
-"259
-[; ;main.c: 259:                 break;
+[e = _band -> 30 `i ]
+"270
+[; ;main.c: 270:                 break;
 [e $U 2229  ]
-"260
-[; ;main.c: 260:             case 2: band = 2;
+"271
+[; ;main.c: 271:             case 2: band = 2;
 [e :U 2233 ]
 [e = _band -> 2 `i ]
-"261
-[; ;main.c: 261:                 break;
+"272
+[; ;main.c: 272:                 break;
 [e $U 2229  ]
-"262
-[; ;main.c: 262:         }
+"273
+[; ;main.c: 273:         }
 }
 [e $U 2229  ]
 [e :U 2230 ]
@@ -2628,85 +2628,85 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 2 `i 2233
  2229 ]
 [e :U 2229 ]
-"264
-[; ;main.c: 264:         errsig = count - ip_pulse;
+"275
+[; ;main.c: 275:         errsig = count - ip_pulse;
 [e = _errsig - _count _ip_pulse ]
-"268
-[; ;main.c: 268:         if (errsig < 0) {
+"279
+[; ;main.c: 279:         if (errsig < 0) {
 [e $ ! < _errsig -> 0 `i 2234  ]
 {
-"269
-[; ;main.c: 269:             LATAbits.LATA0 = 0;
+"280
+[; ;main.c: 280:             LATAbits.LATA0 = 0;
 [e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
-"270
-[; ;main.c: 270:             LATAbits.LATA1 = 1;
+"281
+[; ;main.c: 281:             LATAbits.LATA1 = 1;
 [e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
-"271
-[; ;main.c: 271:             LATAbits.LATA2 = 1;
+"282
+[; ;main.c: 282:             LATAbits.LATA2 = 1;
 [e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
-"272
-[; ;main.c: 272:             LATEbits.LATE2 = 1;
+"283
+[; ;main.c: 283:             LATEbits.LATE2 = 1;
 [e = . . _LATEbits 0 2 -> -> 1 `i `uc ]
-"273
-[; ;main.c: 273:  }
+"284
+[; ;main.c: 284:         }
 }
 [e :U 2234 ]
-"276
-[; ;main.c: 276:         if ((errsig < band) && (errsig > -band))
+"287
+[; ;main.c: 287:         if ((errsig < band) && (errsig > -band))
 [e $ ! && < _errsig _band > _errsig -U _band 2235  ]
-"277
-[; ;main.c: 277:         {
+"288
+[; ;main.c: 288:         {
 {
-"278
-[; ;main.c: 278:             LATAbits.LATA0 = 1;
+"289
+[; ;main.c: 289:             LATAbits.LATA0 = 1;
 [e = . . _LATAbits 0 0 -> -> 1 `i `uc ]
-"279
-[; ;main.c: 279:             LATAbits.LATA1 = 0;
+"290
+[; ;main.c: 290:             LATAbits.LATA1 = 0;
 [e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
-"280
-[; ;main.c: 280:             LATAbits.LATA2 = 0;
+"291
+[; ;main.c: 291:             LATAbits.LATA2 = 0;
 [e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
-"281
-[; ;main.c: 281:             LATEbits.LATE2 = 0;
+"292
+[; ;main.c: 292:             LATEbits.LATE2 = 0;
 [e = . . _LATEbits 0 2 -> -> 0 `i `uc ]
-"282
-[; ;main.c: 282:      }
+"293
+[; ;main.c: 293:         }
 }
 [e :U 2235 ]
-"284
-[; ;main.c: 284:         if (errsig > 0) {
+"295
+[; ;main.c: 295:         if (errsig > 0) {
 [e $ ! > _errsig -> 0 `i 2236  ]
 {
-"285
-[; ;main.c: 285:             LATAbits.LATA0 = 1;
+"296
+[; ;main.c: 296:             LATAbits.LATA0 = 1;
 [e = . . _LATAbits 0 0 -> -> 1 `i `uc ]
-"286
-[; ;main.c: 286:             LATAbits.LATA1 = 0;
+"297
+[; ;main.c: 297:             LATAbits.LATA1 = 0;
 [e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
-"287
-[; ;main.c: 287:             LATAbits.LATA2 = 1;
+"298
+[; ;main.c: 298:             LATAbits.LATA2 = 1;
 [e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
-"288
-[; ;main.c: 288:             LATEbits.LATE2 = 0;
+"299
+[; ;main.c: 299:             LATEbits.LATE2 = 0;
 [e = . . _LATEbits 0 2 -> -> 0 `i `uc ]
-"289
-[; ;main.c: 289:        }
+"300
+[; ;main.c: 300:         }
 }
 [e :U 2236 ]
-"363
-[; ;main.c: 363:         printf("Input pulse = %d Hall counter = %d Error signal= %d \r\n", ip_pulse, count, errsig);
+"374
+[; ;main.c: 374:         printf("Input pulse = %d Hall counter = %d Error signal= %d \r\n", ip_pulse, count, errsig);
 [e ( _printf , , , (. :s 4C _ip_pulse _count _errsig ]
-"364
-[; ;main.c: 364:         _delay((unsigned long)((200)*(500000/4000.0)));
+"375
+[; ;main.c: 375:         _delay((unsigned long)((200)*(500000/4000.0)));
 [e ( __delay (1 -> * -> -> 200 `i `d / -> -> 500000 `l `d .4000.0 `ul ]
-"366
-[; ;main.c: 366:     }
+"377
+[; ;main.c: 377:     }
 }
 [e :U 2213 ]
 [e $U 2214  ]
 [e :U 2215 ]
-"367
-[; ;main.c: 367: }
+"378
+[; ;main.c: 378: }
 [e :UE 2202 ]
 }
 [p f _printf 8388736 ]

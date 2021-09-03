@@ -62,9 +62,9 @@
   mody = 2:  Winch - proportional starting in mid-stick position. No limit switches.
   Make sure that you set mody to mode you want.
   Proportional Piston Tank Controller or winch controller by David Forrest based on work by Eric Weber and Gabriel Staples. 18/9/2018
- The software can be used for 3 easily available (eg eBay) H bridge controllers:
+ The software can be used for 3 easily available (e.g eBay) H bridge controllers:
   (a)IBT-2 Double BTS7960 H-bridge driver circuit using Motor Driver Auto BTS7960 43A H-Bridge PWM Drive. 43 Amps
-  (b)L298N DC Stepper Motor Driver Module Dual H Bridge Control Board for Double H bridge drive. Drive current 2A(MAX single bridge)
+  (b)L298N DC Stepper Motor Driver Module Dual H Bridge                                                                    Control Board for Double H bridge drive. Drive current 2A(MAX single bridge)
   (c)L293D Module For Arduino L293D motor shield. 600mA OUTPUT CURRENT CAPABILITY PER CHANNEL. 1.2A PEAK OUTPUT CURRENT (non repetitive)PER CHANNEL. Often called Deek-Robot
   (Check these L293D modules carefully. I had a batch of these where the L293D chip had been reversed causing overheating. Had me scratching my head for a day or two!)
 Hall switch (A1104 from Allegro) used to count revolutions and give proportional control.
@@ -78,6 +78,14 @@ Hall switch (A1104 from Allegro) used to count revolutions and give proportional
   Aug 2018 Pin information added for cheap and easily available (43  Amps !?)IBT 2 using Double BTS7960 H-bridge driver circuit,
   Sept 2018 Library information given for RC Guy (Gabriel Staples) (Now seems to need  a $5 donation.)
 
+Pins for PIC 18f47k42 version connections are:
+A0 is in1
+A1 is in2
+A2 is enA
+E2 for LED showing reverse
+C1 is r/c pulse input
+B0 is Hall switch input
+B2 & B3 are are USB connection to PC
  */
 
 #include "mcc_generated_files/mcc.h"
@@ -232,12 +240,15 @@ void main(void) {
 
         //Set value for ip_pulse. ( For a screw length of about 250 revs. 15 is stick trim factor)
         switch (mody) {
-            case 0: ip_pulse = (((Width - 0) / 0.5) - 240);
+
+                // scale() // Scale function doesn't seem to be available so divide range of 255 by actual range and subtract minimum actual value.
+            case 0: ip_pulse = ((Width - 169)*4.5); // For LoRa RX. 169 is minimum stick input. 226 maximum.      
+                //case 0: ip_pulse = (((Width - 0) / 0.5) - 240); // For 40Mhz RX
                 break;
-            case 1: ip_pulse = (((Width - 0) / 0.5) - 240);
+            case 1: ip_pulse = ((Width - 169)*4.5);
                 break;
                 //case 2:   ip_pulse = (((pulseTime - 1005) / 90) - 0); break;
-            case 2: ip_pulse = (((Width - 0) / 0.5) - 240);
+            case 2: ip_pulse = ((Width - 169)*4.5);
                 break;
         }
 
@@ -255,7 +266,7 @@ void main(void) {
         switch (mody) {
             case 0: band = 5;
                 break;
-            case 1: band = 20;
+            case 1: band = 30;
                 break;
             case 2: band = 2;
                 break;
@@ -270,8 +281,8 @@ void main(void) {
             LATAbits.LATA1 = 1; // LATA1 is in2
             LATAbits.LATA2 = 1; // LATA2 is enA. High runs motor
             LATEbits.LATE2 = 1; // Installed LED, shows reverse
- }
-  // If absolute value of errsig is less than deadband, stop the motor
+        }
+        // If absolute value of errsig is less than deadband, stop the motor
 
         if ((errsig < band) && (errsig > -band)) // Set dead-band
         {
@@ -279,14 +290,14 @@ void main(void) {
             LATAbits.LATA1 = 0; // LATA1 is in2
             LATAbits.LATA2 = 0; // LATA2 is enA. High runs motor
             LATEbits.LATE2 = 0; // Installed LED, shows reverse
-     }
-   //Set motor to forward
+        }
+        //Set motor to forward
         if (errsig > 0) {
             LATAbits.LATA0 = 1; // LATA0  is in1. Swap in1 & in2 to reverse motor
             LATAbits.LATA1 = 0; // LATA1 is in2
             LATAbits.LATA2 = 1; // LATA2 is enA. High runs motor
             LATEbits.LATE2 = 0; // Installed LED, shows reverse
-       }
+        }
 
         /*
           // Failsafe routine - set piston to empty, pump out

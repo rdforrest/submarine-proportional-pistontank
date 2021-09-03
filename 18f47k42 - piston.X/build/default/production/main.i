@@ -7,7 +7,7 @@
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
-# 83 "main.c"
+# 91 "main.c"
 # 1 "./mcc_generated_files/mcc.h" 1
 # 49 "./mcc_generated_files/mcc.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 1 3
@@ -27443,7 +27443,7 @@ void SYSTEM_Initialize(void);
 void OSCILLATOR_Initialize(void);
 # 101 "./mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
-# 83 "main.c" 2
+# 91 "main.c" 2
 
 
 
@@ -27471,7 +27471,7 @@ void counterHall_callback(void) {
     Counter = Counter + 1;
 
 }
-# 154 "main.c"
+# 162 "main.c"
 void main(void) {
 
     SYSTEM_Initialize();
@@ -27553,12 +27553,15 @@ void main(void) {
 
 
         switch (mody) {
-            case 0: ip_pulse = (((Width - 0) / 0.5) - 240);
+
+
+            case 0: ip_pulse = ((Width - 169)*4.5);
+
                 break;
-            case 1: ip_pulse = (((Width - 0) / 0.5) - 240);
+            case 1: ip_pulse = ((Width - 169)*4.5);
                 break;
 
-            case 2: ip_pulse = (((Width - 0) / 0.5) - 240);
+            case 2: ip_pulse = ((Width - 169)*4.5);
                 break;
         }
 
@@ -27576,7 +27579,7 @@ void main(void) {
         switch (mody) {
             case 0: band = 5;
                 break;
-            case 1: band = 20;
+            case 1: band = 30;
                 break;
             case 2: band = 2;
                 break;
@@ -27591,7 +27594,7 @@ void main(void) {
             LATAbits.LATA1 = 1;
             LATAbits.LATA2 = 1;
             LATEbits.LATE2 = 1;
- }
+        }
 
 
         if ((errsig < band) && (errsig > -band))
@@ -27600,15 +27603,15 @@ void main(void) {
             LATAbits.LATA1 = 0;
             LATAbits.LATA2 = 0;
             LATEbits.LATE2 = 0;
-     }
+        }
 
         if (errsig > 0) {
             LATAbits.LATA0 = 1;
             LATAbits.LATA1 = 0;
             LATAbits.LATA2 = 1;
             LATEbits.LATE2 = 0;
-       }
-# 363 "main.c"
+        }
+# 374 "main.c"
         printf("Input pulse = %d Hall counter = %d Error signal= %d \r\n", ip_pulse, count, errsig);
         _delay((unsigned long)((200)*(500000/4000.0)));
 

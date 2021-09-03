@@ -157,9 +157,9 @@ TMR4_UART2_TX_EDGE 24
 [v ___omul __omul `(uo  1 e 8 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-"106 C:\Users\rdfor\Desktop\MPLABXProjects\18f47k42 - piston.X\main.c
+"114 C:\Users\rdfor\Desktop\MPLABXProjects\18f47k42 - piston.X\main.c
 [v _counterHall_callback counterHall_callback `(v  1 e 1 0 ]
-"154
+"162
 [v _main main `(v  1 e 1 0 ]
 "32 C:\Users\rdfor\Desktop\MPLABXProjects\18f47k42 - piston.X\mcc_generated_files/ext_int.c
 [v _INT0_ISR INT0_ISR `(v  1 e 1 0 ]
@@ -860,25 +860,25 @@ TMR4_UART2_TX_EDGE 24
 [v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
 "69
 [v _nout nout `i  1 s 2 nout ]
-"86 C:\Users\rdfor\Desktop\MPLABXProjects\18f47k42 - piston.X\main.c
+"94 C:\Users\rdfor\Desktop\MPLABXProjects\18f47k42 - piston.X\main.c
 [v _mody mody `i  1 e 2 0 ]
-"87
+"95
 [v _band band `i  1 e 2 0 ]
-"88
+"96
 [v _ip_pulse ip_pulse `i  1 e 2 0 ]
-"89
+"97
 [v _errsig errsig `i  1 e 2 0 ]
-"92
-[v _lastState lastState `i  1 e 2 0 ]
-"93
-[v _count count `i  1 e 2 0 ]
-"99
-[v _Width Width `ul  1 e 4 0 ]
 "100
-[v _Period Period `ul  1 e 4 0 ]
+[v _lastState lastState `i  1 e 2 0 ]
 "101
+[v _count count `i  1 e 2 0 ]
+"107
+[v _Width Width `ul  1 e 4 0 ]
+"108
+[v _Period Period `ul  1 e 4 0 ]
+"109
 [v _Timer Timer `ul  1 e 4 0 ]
-"102
+"110
 [v _Counter Counter `i  1 e 2 0 ]
 "30 C:\Users\rdfor\Desktop\MPLABXProjects\18f47k42 - piston.X\mcc_generated_files/ext_int.c
 [v _INT0_InterruptHandler INT0_InterruptHandler `*.38(v  1 e 3 0 ]
@@ -896,10 +896,10 @@ TMR4_UART2_TX_EDGE 24
 [v _UART1_OverrunErrorHandler UART1_OverrunErrorHandler `*.38(v  1 e 3 0 ]
 "60
 [v _UART1_ErrorHandler UART1_ErrorHandler `*.38(v  1 e 3 0 ]
-"154 C:\Users\rdfor\Desktop\MPLABXProjects\18f47k42 - piston.X\main.c
+"162 C:\Users\rdfor\Desktop\MPLABXProjects\18f47k42 - piston.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"367
+"378
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\printf.c
 [v _printf printf `(i  1 e 2 0 ]
@@ -1059,47 +1059,36 @@ TMR4_UART2_TX_EDGE 24
 [v ___fltol __fltol `(l  1 e 4 0 ]
 {
 "45
-[v ___fltol@exp1 exp1 `uc  1 a 1 64 ]
-[v ___fltol@sign1 sign1 `uc  1 a 1 63 ]
+[v ___fltol@exp1 exp1 `uc  1 a 1 48 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 47 ]
 "43
-[v ___fltol@f1 f1 `d  1 p 4 55 ]
+[v ___fltol@f1 f1 `d  1 p 4 39 ]
 "70
 } 0
-"11 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcdiv.c
-[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
 {
-"21
-[v ___fldiv@grs grs `ul  1 a 4 33 ]
-"22
-[v ___fldiv@rem rem `ul  1 a 4 26 ]
-"20
-[v ___fldiv@new_exp new_exp `s  1 a 2 31 ]
-"19
-[v ___fldiv@aexp aexp `uc  1 a 1 38 ]
-"18
-[v ___fldiv@bexp bexp `uc  1 a 1 37 ]
-"16
-[v ___fldiv@sign sign `uc  1 a 1 30 ]
-"11
-[v ___fldiv@b b `d  1 p 4 14 ]
-[v ___fldiv@a a `d  1 p 4 18 ]
-"185
-} 0
-"10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcadd.c
-[v ___fladd __fladd `(d  1 e 4 0 ]
-{
-"17
-[v ___fladd@grs grs `uc  1 a 1 54 ]
-"15
-[v ___fladd@bexp bexp `uc  1 a 1 53 ]
-"16
-[v ___fladd@aexp aexp `uc  1 a 1 52 ]
+[s S1784 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[v ___fladd@signs signs `uc  1 a 1 51 ]
+[s S1789 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S1792 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1784 1 fAsBytes 4 0 `S1789 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1792  1 a 4 33 ]
+"12
+[v ___flmul@grs grs `ul  1 a 4 27 ]
+[s S1860 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S1863 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1860 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1863  1 a 2 37 ]
 "10
-[v ___fladd@b b `d  1 p 4 39 ]
-[v ___fladd@a a `d  1 p 4 43 ]
-"237
+[v ___flmul@bexp bexp `uc  1 a 1 32 ]
+"11
+[v ___flmul@aexp aexp `uc  1 a 1 31 ]
+"9
+[v ___flmul@sign sign `uc  1 a 1 26 ]
+"8
+[v ___flmul@b b `d  1 p 4 14 ]
+[v ___flmul@a a `d  1 p 4 18 ]
+"205
 } 0
 "50 C:\Users\rdfor\Desktop\MPLABXProjects\18f47k42 - piston.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -1205,8 +1194,8 @@ TMR4_UART2_TX_EDGE 24
 {
 "57
 } 0
-"106 C:\Users\rdfor\Desktop\MPLABXProjects\18f47k42 - piston.X\main.c
+"114 C:\Users\rdfor\Desktop\MPLABXProjects\18f47k42 - piston.X\main.c
 [v _counterHall_callback counterHall_callback `(v  1 e 1 0 ]
 {
-"109
+"117
 } 0
