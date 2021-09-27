@@ -60,9 +60,9 @@ void loop() {
 
   // Calculations here
 
-  //Set value for ip_pulse. ( For a screw length of about 250 revs. 15 is stick trim factor)
+  //Set value for input_pulse. For 0 to 300 ip_pulse and screw length of about 100 revs.(This is for 470 ml piston tank.) 15 is stick trim factor)
   switch (mody) {
-    case 0:   ip_pulse = (((pulseTime - 1005) / 11) - 5); break;
+    case 0:   ip_pulse = (((pulseTime - 1005) / 9) - 5); break;
     case 1:   ip_pulse = (((pulseTime - 1005) / 7) - 15); break;
     //case 2:   ip_pulse = (((pulseTime - 1005) / 90) - 0); break;
     case 2:   ip_pulse = (((pulseTime - 1005) / 160) - 0); break;
